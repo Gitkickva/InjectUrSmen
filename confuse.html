@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<head>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <meta property="og:type" content="Injector">
+<meta property="og:title" content="Get Injector" />
+<meta property="og:description" content="Injector is a JavaScript bookmark built primarily for ChromeOS devices to circumvent restrictive school security extensions like iBoss, GoGuardian, Harpara, etc." />
+<meta property="og:url" content="https://inject0r.xyz" />
+<meta property="og:image" content="https://inject0r.xyz/logo.png" />
+  <title>Injector</title>
+    <style>
+      @keyframes openingAnim{
+        0%{
+          opacity: 0;
+          left: calc(50% - 125px);
+          top: calc(50% - 125px);
+        }
+        33%{
+          opacity: 1;
+          left: calc(50% - 125px);
+          top: calc(50% - 125px);
+        }
+        66%{
+          left: calc(50% - 125px);
+          top: 0px;
+        }
+        99%{
+                    
+        }
+      }
+        #openingLogo{
+          position: absolute;
+          width: 250px;
+          height: 250px;
+          z-index: 3;
+          background-color: black;
+          left: 0px;
+          top: 0px;
+          user-select: none;
+          animation-name: openingAnim;
+          animation-duration: 2s;
+          animation-style: ease-out;
+          transition-duration: 0.5s;
+          user-select: none;
+        }
+        #nameTxt{
+          position: absolute;
+          top: 15px;
+          z-index: 2;
+          right: calc(100% - 765px);
+          color: white;
+          background-color: transparent;
+          width: 0px;
+          height: 125px;
+          font-size: 75px;
+          font-weight: bold;
+          font-family: Helvetica;
+          animation-name: openingAnimTxt;
+          animation-duration: 2s;
+          animation-style: ease-out;
+          text-overflow: clip;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          transition-duration: 0.8s;
+          user-select: none;
+          
+
+        }
+        #subNameText{
+          position: absolute;
+          top: 75px;
+          left: 0px;
+          color: gray;
+          font-family: Helvetica;
+          font-weight: thin;
+          font-size: 15px;
+          user-select: none;
+        }
+        body{
+          background-color: black;
+          overflow-y: hidden;
+          overflow-x: hidden;
+        }
+        .CategoryMenu{
+          position: absolute;
+          background-color: #1f1f1f;
+          width: 150px;
+          height: calc(100% - 275px);
+          bottom: 10px;
+          left: -160px;
+          transition-duration: 0.5s;
+          overflow-y: auto;
+        }
+        categoryBtn{
+          position: absolute;
+          width: calc(100% - 10px);
+          height: 50px;
+          left: 5px;
+          background-color: black;
+          color: white;
+          text-align: center;
+          line-height: 50px;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: Helvetica;
+          transition-duration: 0.2s;
+          user-select: none;
+        }
+        categoryBtn:hover{
+          background-color: #2b2b2b;
+          cursor: pointer;
+
+        }
+        #categoryContent{
+          position: absolute;
+          left: 170px;
+          bottom: 10px;
+          opacity: 0;
+          width: 650px;
+          height: calc(100% - 275px);
+          background-color: #1f1f1f;
+          transition-duration: 0.4s;
+        }
+        #categoryHeader{
+          position: absolute;
+          top: 5px;
+          left: 10px;
+          height: 75px;
+          width: 50%;
+          font-size: 30px;
+          font-weight: bold;
+          font-family: Helvetica;
+          color: white;
+          text-align: top;
+          margin: 0px;
+
+        }
+        #imageSection{
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          height: calc(100% - 10px);
+          width: 250px;
+          background-color: transparent;
+          line-height: calc(100% - 10px);
+          font-size: 35px;
+          font-family: Helvetica;
+          font-weight: bold;
+          font-color: gray;
+          overflow-y: auto;
+          overflow-x: hidden;
+          border-left: solid;
+          border-color: white;
+          border-width: 1px;
+        }
+        #categoryContentText{
+          position: absolute;
+          top: 45px;
+          width: calc(100% - 268px);
+          left: 5px;
+          height: calc(100% - 70px);
+          color: white;
+          background-color: transparent;
+          font-family: Helvetica;
+          font-size: 16px;
+          overflow-y: auto;
+
+        }
+        #exampleImage{
+          position: absolute;
+          width: 100%;
+          height: 115px;
+          background-color: black;
+          top: 0px;
+          left: 5px;
+
+
+        }
+        #InjectionPoint{
+          position: absolute;
+          top: 10px;
+          right: -260px;
+          width: 250px;
+          height: 75px;
+          background-color: #1f1f1f;
+          color: white;
+          font-family: Helvetica;
+          transition-duration: 0.4s;
+          text-align: center;
+          visibility: hidden;
+        }
+        #discLogo{
+          position: absolute;
+          opacity: 1;
+          bottom: 10px;
+          right: -75px;
+          width: 75px;
+          height: 75px;
+          background-color: black;
+          transition-duration: 0.4s;
+          border-radius: 100%;
+          border-style: solid;
+          border-color: white;
+          border-width: 0px;
+        }
+        #discLogo:hover{
+          cursor: pointer;
+          opacity: 0.75;
+        }
+        #regref{
+          color: white;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-family: Helvetica;
+          font-weight: bold;
+          opacity: 0;
+          transition-duration: 0.25s;
+        }
+      </style>
+
+  </head>
+  <body>
+   <img id="openingLogo" src="/logo.png">
+    <h1 id="nameTxt">Injector<p id="subNameText">version 2.2.1</p></h1>
+    <img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-logo-logodownload-download-logotipos-1.png" id="discLogo">
+    <div class="CategoryMenu" id="CategoryMenu"></div>
+    <div id="categoryContent">
+      <p id="categoryHeader">Placeholder Text</p>
+      <p id="categoryContentText"></p>
+      <div id="imageSection">
+        </div>
+    </div>
+    <div id="InjectionPoint">
+      <p id="nameChangingTxt"> If you have Injector, run it on this page to access your User Panel </p>
+    </div>
+    <p id="regref">Bought Injector? Register <a href="/register">here</a></p>
+   <script>
+      let logo = document.getElementById("openingLogo")
+      let nameText = document.getElementById("nameTxt");
+      let categoryMenu = document.getElementById("CategoryMenu");
+      let categoryContent = document.getElementById("categoryContent");
+      let categoryHeader = document.getElementById("categoryHeader");
+      let imageSection = document.getElementById("imageSection");
+      let categoryContentText = document.getElementById("categoryContentText");
+      let injectionPoint = document.getElementById("InjectionPoint");
+      let discIcon = document.getElementById("discLogo")
+      setTimeout(function(){
+        nameText.style.width = "500px";
+      }, 1200)
+      setTimeout(function(){
+        categoryMenu.style.left = "10px";
+        injectionPoint.style.right = "10px";
+        discIcon.style.right = "10px";
+        document.querySelector("#regref").style.opacity = "1";
+      }, 1500);
+      let catFT = 5;
+      let numImages = 0;
+      let descEnabled = false;
+      discIcon.addEventListener("click", function(){
+        window.open("https://discord.gg/3cvGpJ96MR")
+      })
+      function newCategory(name, headerContent, contentText, imageArray){
+        let btn = document.createElement("categoryBtn");
+        categoryMenu.appendChild(btn);
+        btn.textContent = name.toString();
+        btn.style.top = catFT + "px";
+        catFT += 55;
+        btn.addEventListener("click", function(){
+        if(!descEnabled){
+          categoryContent.style.opacity = "1";
+          descEnabled = !descEnabled;
+        }
+        categoryHeader.textContent = headerContent;
+        categoryContentText.innerHTML = contentText;
+        while(imageSection.firstChild)
+   imageSection.removeChild(imageSection.firstChild);
+        numImages = 0;
+        for(i=0; i<imageArray.length; i++){
+          let newImg = document.createElement("img");
+          imageSection.appendChild(newImg);
+          newImg.id = "exampleImage";
+          newImg.src = imageArray[i];
+          newImg.style.top = numImages + "px";
+          numImages += 120;
+          
+        }
+        });
+      }
+      newCategory("About", "What is Injector?", `Injector is a JavaScript bookmark developed by bobthehairman.<br><br> It creates a pseudo-desktop environment on any page you run it on which has multiple apps for games, proxying, chatting, ect, and it can be hidden at any time by simply pressing Right Shift.<br><br>Its primary use is to circumvent school security mechanisms like iBoss, GoGuardian, Securly, Harpara, ect.`, ["/exdesktop.png", "/exlogin.png"]);
+      newCategory("Features", "Features", `Injector's currently included apps are as follows: <br><br>
+      Changelog: Lists most recent update's changes <br> <br>
+      Exploit Hub: Basic general use exploits <br><br>
+      Chatbox2: A chatroom to talk to other Injector users, with indicators as to who is on the chatroom <br><br>
+      ProxBrowser: A browser that proxies all sites you put into it, effectively unblocking sites. <br><br>
+      App Store: A place for 3rd party devs to upload apps. <br><br>
+      Personalize: Change the theme of Injector. Saves between sites.`, ["/exapps.png"]);
+      newCategory("App Store", "App Store", `As mentioned in the Features tab, the App Store is a place for third party developers to upload their own apps. <br><br>Apps downloaded on the App Store will save cross-site. Apps are not restricted to just windows, either; they can be libraries, themes, you name it. <br><br> Apps are all verified through official Injector developers to ensure no malicious code is included. If you'd like to upload an app, contact me on the official Injector discord at https://discord.gg/3cvGpJ96MR.`);
+      newCategory("Purchase", "Purchase Injector", `Injector sells for $2.50, and can be bought via Paypal. <br> Contact me on Discord through the Injector server (https://discord.gg/3cvGpJ96MR) to buy Injector.<br><br> Purchase instructions are in the #buy-injector channel of the Injector discord.`)
+     </script>
+    </body>

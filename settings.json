@@ -1,0 +1,9 @@
+{
+	"chatroom": {
+		"file_limit": 102000000000000000040,
+		"message_size_limit": 500,
+		"file": "./chatroom2.json",
+		"admins": ["bobthehairman"],
+    "bannedUsers":[]
+	}
+}
