@@ -1,1 +1,1 @@
-windows.alert("Test")
+alert("Test")
