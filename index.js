@@ -1,1 +1,1 @@
-document.getElementById("demo").innerHTML = 5 + 6;
+windows.alert("Test")
